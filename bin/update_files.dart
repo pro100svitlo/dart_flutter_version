@@ -69,6 +69,11 @@ Future<void> main() async {
     rootDirPath: rootDirPath,
   );
 
+  logInfo(
+    'Running `flutter pub get` to update dependencies for the example app...',
+  );
+  await runProcess(command: 'flutter', arguments: ['pub', 'get']);
+
   await appendVersionChangesToChangelog(
     rootDirPath: rootDirPath,
     newVersion: newPackageVersion,

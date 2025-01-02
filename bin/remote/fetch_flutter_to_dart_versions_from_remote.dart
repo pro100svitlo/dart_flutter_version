@@ -10,6 +10,10 @@ const _flutterDevArchiveUrl =
 /// The CSS selector for the macOS stable downloads table.
 const _downloadsTableSelector = '#downloads-macos-stable';
 
+void main() {
+  fetchFlutterToDartVersionsFromRemote();
+}
+
 /// Fetches a map of Flutter-to-Dart versions from the Flutter Dev archive.
 ///
 /// This function:

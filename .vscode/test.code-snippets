@@ -1,0 +1,22 @@
+{
+	"Test template": {
+		"prefix": "tst",
+		"body": [
+			"test(",
+			"  '''",
+            "  given $1 ",
+			"  when $2 ",
+			"  then $3",
+			"  ''',",
+			"  () {",
+			"    // Given",
+            "",
+			"    // When",
+            "",
+			"    // Then",
+			"  },",
+			");"
+		],
+		"description": "Test template"
+	}
+}

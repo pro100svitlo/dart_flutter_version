@@ -31,8 +31,8 @@ import 'package:pub_semver/pub_semver.dart';
 /// See also:
 /// - [Dart SDK](https://dart.dev/get-dart)
 /// - [Flutter SDK documentation](https://docs.flutter.dev)
-
 final dartToFlutterMap = {
+  Version.parse('3.6.0'): Version.parse('3.27.1'),
   Version.parse('3.5.4'): Version.parse('3.24.5'),
   Version.parse('3.5.3'): Version.parse('3.24.3'),
   Version.parse('3.5.2'): Version.parse('3.24.2'),

@@ -1,7 +1,7 @@
 # dart_flutter_version
 
 [![pub.dev](https://img.shields.io/pub/v/dart_flutter_version.svg)](https://pub.dev/packages/dart_flutter_version)
-[![GitHub stars](https://img.shields.io/github/stars/pro100svitlo/dart_flutter_version.svg?style=social&label=Star)](https://github.com/pro100svitlo/dart_flutter_version/stargazers)
+![Bintray](https://img.shields.io/static/v1?label=Latest%20Supported%20Flutter%20Version&message=3.27.1&color=green)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pro100svitlo/dart_flutter_version/blob/main/LICENSE)
 
 Retrieve the current Dart and Flutter SDK semantic versions with easy-to-use nullable getters for streamlined version management.

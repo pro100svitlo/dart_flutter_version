@@ -30,14 +30,6 @@ class DartVersionParser {
       return null;
     }
 
-    final version = match.group(1);
-    try {
-      return Version.parse(version!);
-    } on FormatException {
-      logger.error(
-        'Parsed Dart version is not a valid semantic version: $version',
-      );
-      return null;
-    }
+    return Version.parse(match.group(1)!);
   }
 }

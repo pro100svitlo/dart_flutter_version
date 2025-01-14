@@ -60,6 +60,11 @@ Future<void> main() async {
     exit(0);
   }
 
+  logInfo(
+    'Running `dart format .` to format the code after updating versions...',
+  );
+  runProcess(command: 'dart', arguments: ['format', '.']);
+
   await commitMapFileChanges(
     diffVersions: diffVersions,
     mapFileName: mapFileName,

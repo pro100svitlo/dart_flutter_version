@@ -1,3 +1,8 @@
+## 0.1.5
+
+* Updated map file with new versions:
+  - Dart 3.6.1 -> Flutter 3.27.2
+
 ## 0.1.4
 
 * Update README and improve pub.dev score

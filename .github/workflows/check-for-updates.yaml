@@ -2,19 +2,28 @@ name: Check for updates
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch:
+
+env:
+  GIT_USER_EMAIL: "pro100svitlo@gmail.com"
+  GIT_USER_NAME: "Andrii Antonov"
 
 jobs:
   check-for-updates:
     runs-on: macos-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.USER_PAT }}
       
+      - name: Setup git credentials
+        run: |
+          git config --global user.email "${{ env.GIT_USER_EMAIL }}"
+          git config --global user.name "${{ env.GIT_USER_NAME }}"
+
       - name: Throws if not on main branch
         run: |
           gitCurrentBranch=$(git rev-parse --abbrev-ref HEAD)
@@ -42,31 +51,28 @@ jobs:
         run: flutter format --set-exit-if-changed --dry-run .
 
       - name: Check and Push Latest Tag
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.USER_PAT }}
-          script: |
-            # Get the latest local tag
-            latest_local_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
-            if [ -z "$latest_local_tag" ]; then
-              echo "No local tags found. This should not happen. Exiting with error."
-              exit 1
-            fi
+        run: |
+          # Get the latest local tag
+          latest_local_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          if [ -z "$latest_local_tag" ]; then
+            echo "No local tags found. This should not happen. Exiting with error."
+            exit 1
+          fi
 
-            echo "Latest local tag: $latest_local_tag"
+          echo "Latest local tag: $latest_local_tag"
 
-            # Check if the latest local tag exists in the remote
-            if git ls-remote --tags origin | grep -q "refs/tags/$latest_local_tag"; then
-              echo "Latest local tag $latest_local_tag already exists in the remote."
-              echo "Nothing to do. Exiting."
-              exit 0
-            fi
+          # Check if the latest local tag exists in the remote
+          if git ls-remote --tags origin | grep -q "refs/tags/$latest_local_tag"; then
+            echo "Latest local tag $latest_local_tag already exists in the remote."
+            echo "Nothing to do. Exiting."
+            exit 0
+          fi
 
-            echo "Latest local tag $latest_local_tag does not exist in the remote."
+          echo "Latest local tag $latest_local_tag does not exist in the remote."
 
-            echo "Pushing changes..."
-            git push origin main
+          echo "Pushing changes..."
+          git push origin main
 
-            # Push the latest local tag
-            echo "Pushing tag $latest_local_tag..."
-            git push origin "$latest_local_tag"
+          # Push the latest local tag
+          echo "Pushing tag $latest_local_tag..."
+          git push origin "$latest_local_tag"

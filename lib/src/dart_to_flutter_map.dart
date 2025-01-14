@@ -9,9 +9,10 @@ import 'package:pub_semver/pub_semver.dart';
 /// - **Value** (Flutter SDK Version): Identifies the corresponding stable
 ///   Flutter release that ships with (or supports) that Dart version.
 ///
-/// To find ouf more about the generation process, check README.md
+/// To find ouf more about the generation process, check README.md 
 /// file in the root directory.
 final dartToFlutterMap = {
+  Version.parse('3.6.1'): Version.parse('3.27.2'),
   Version.parse('3.6.0'): Version.parse('3.27.1'),
   Version.parse('3.5.4'): Version.parse('3.24.5'),
   Version.parse('3.5.3'): Version.parse('3.24.3'),

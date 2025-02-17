@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Stable release
+  
 ## 0.1.8
 
 * Updated map file with new versions:

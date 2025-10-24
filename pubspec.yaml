@@ -1,6 +1,6 @@
 name: dart_flutter_version
 description: Retrieve the current Dart and Flutter SDK semantic versions with easy-to-use nullable getters for streamlined version management.
-version: 1.0.18
+version: 1.0.19
 repository: https://github.com/pro100svitlo/dart_flutter_version
 issue_tracker: https://github.com/pro100svitlo/dart_flutter_version/issues
 funding:

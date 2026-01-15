@@ -2,7 +2,7 @@
 
 [![pub.dev](https://img.shields.io/pub/v/dart_flutter_version.svg)](https://pub.dev/packages/dart_flutter_version)
 [![Check for updates](https://github.com/pro100svitlo/dart_flutter_version/actions/workflows/check-for-updates.yaml/badge.svg?branch=main)](https://github.com/pro100svitlo/dart_flutter_version/actions/workflows/check-for-updates.yaml)
-[![Bintray](https://img.shields.io/static/v1?label=Latest%20Supported%20Flutter%20Version&message=3.38.6&color=green)](https://docs.flutter.dev/release/archive#stable-channel-macos)
+[![Bintray](https://img.shields.io/static/v1?label=Latest%20Supported%20Flutter%20Version&message=3.38.7&color=green)](https://docs.flutter.dev/release/archive#stable-channel-macos)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pro100svitlo/dart_flutter_version/blob/main/LICENSE)
 
 Retrieve the current __**Flutter**__ and Dart __**SDK version at runtime**__ with easy-to-use nullable getters for seamless and dynamic version management.

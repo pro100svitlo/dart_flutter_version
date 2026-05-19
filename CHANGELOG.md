@@ -1,3 +1,8 @@
+## 1.0.40
+
+* Updated map file with new versions:
+  - Dart 3.12.0 -> Flutter 3.44.0
+
 ## 1.0.39
 
 * Updated map file with new versions:

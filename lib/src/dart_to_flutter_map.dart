@@ -12,7 +12,7 @@ import 'package:pub_semver/pub_semver.dart';
 /// To find ouf more about the generation process, check README.md
 /// file in the root directory.
 final dartToFlutterMap = {
-  Version.parse('3.12.2'): Version.parse('3.44.6'),
+  Version.parse('3.12.2'): Version.parse('3.44.7'),
   Version.parse('3.12.1'): Version.parse('3.44.1'),
   Version.parse('3.12.0'): Version.parse('3.44.0'),
   Version.parse('3.11.5'): Version.parse('3.41.9'),
